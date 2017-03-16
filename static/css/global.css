@@ -1,0 +1,120 @@
+.header   /*class .   id #*/
+{
+    padding: 10px 2px 20px 40px; //内边距，上（top）、右(right)、下(bottom)、左(left)
+    height: 44px;
+    width: ;
+    margin: auto;  /*外边距*/
+    border-bottom:1px #e3e3e3 solid ; /*边框* 直接使用border属性，按照顺序 border-width border-style border-color做对应，也可以一项一项来设置*/
+}
+
+.border-total /*所有用到边框样式的*/
+{
+    border:1px #e3e3e3 solid  ;
+}
+
+
+#img-title
+{
+    height:30px; /*此处只设置高度，不设置宽度，图片会自动缩放*/
+    vertical-align:middle; /*input框和img在同一行，但是无法水平对齐，使用该语句*/
+}
+
+#introduce/*童年魔坊工作室运维管理平台的a标签*/
+{
+    font-size:100%;
+    font-weight:900;
+    color :#1989fa;
+}
+
+a
+{
+    color:#7a8599;
+}
+
+/*a标签无下划线开始*/
+a:link
+{
+    text-decoration: none;
+}
+a:visited
+{
+    text-decoration: none;
+}
+a:hover
+{
+    text-decoration: none;
+}
+a:active
+{
+    text-decoration: none;
+}
+/*a标签无下划线结束*/
+
+.menus
+{
+    float:right;
+}
+
+#a_login,#a_regist
+{
+    margin:15px;
+}
+
+.login /*登录框*/
+{
+    padding:40px 20px 20px 30px;
+    height:auto;
+    width:auto;
+    margin:50px 30px 50px 30px;
+    text-align:center; /* 内容居中*/
+}
+#verify_code
+{
+    width: 190px;
+}
+
+.login input
+{
+    border:1px #e3e3e3 solid;
+    height:42px;
+    width: 300px;
+    border-radius: 4px;
+    margin-bottom: 24px;
+    padding: 6px 12px;
+}
+
+#verify_code_img /*验证码图片*/
+{
+    height:56px;
+    width:105px;
+    cursor:pointer;
+    vertical-align:middle; /*input框和img在同一行，但是无法水平对齐，如果图片设置了外边距，那么这个垂直对齐的语句将会把外边距也算在内*/
+}
+
+
+
+#login_submit /*登录按钮*/
+{
+    background:#1989fa; /* 不能使用color属性*/
+    border:1px #e3e3e3 solid;
+    height:56px;
+    width: 326px;
+    border-radius: 4px;
+    margin-bottom: 14px;
+    padding: 6px 12px;
+    cursor:pointer;
+}
+
+#error_msg
+{
+    color:red;
+}
+
+.border-total a   /*没有账号?立即注册*/
+{
+    font-size:14px;
+}
+
+
+
+

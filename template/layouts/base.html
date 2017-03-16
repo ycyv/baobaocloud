@@ -1,20 +1,27 @@
 <!DOCTYPE html>
-
+{% load static %}
 <html>
 <head>
-    {% block header %}
-    {% include 'layouts/header.html' %}
+    {% block titels %}
+    <title>童年磨坊登录页面</title>
     {% endblock %}
-    {% block style %}
+
+    <meta name="keywords" content="童年磨坊">
+    <meta name="author" content="杨璨阳">
+
+    {% block css %}
+    <link rel="stylesheet" type="text/css"  href="{% static "css/global.css" %}">
+    {% endblock %}
+
+    {% block js %}
+    <!--global.js文件需要调用jquery,所以这里我们必须先加载jquery再加载global.js-->
+    <script src="{% static "js/jquery.min.js" %}"></script>
+    <script src="{% static "js/global.js" %}"></script>
     {% endblock %}
 </head>
 <body>
+    {% include "layouts/header.html" %}
     {% block body %}
-    {% endblock %}
-    {% block footer %}
-    {% include 'layouts/footer.html' %}
-    {% endblock %}
-    {% block script %}
     {% endblock %}
 </body>
 </html>
