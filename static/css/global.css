@@ -1,17 +1,14 @@
 .header   /*class .   id #*/
 {
-    padding: 10px 2px 20px 40px; //内边距，上（top）、右(right)、下(bottom)、左(left)
-    height: 44px;
-    width: ;
+    padding: 10px 2px 20px 40px; /*内边距，上（top）、右(right)、下(bottom)、左(left)*/
     margin: auto;  /*外边距*/
-    border-bottom:1px #e3e3e3 solid ; /*边框* 直接使用border属性，按照顺序 border-width border-style border-color做对应，也可以一项一项来设置*/
+    border-bottom:1px #e3e3e3 solid; /*边框* 直接使用border属性，按照顺序 border-width border-style border-color做对应，也可以一项一项来设置*/
 }
 
 .border-total /*所有用到边框样式的*/
 {
-    border:1px #e3e3e3 solid  ;
+    border:1px #e3e3e3 solid;
 }
-
 
 #img-title
 {
@@ -68,6 +65,7 @@ a:active
     margin:50px 30px 50px 30px;
     text-align:center; /* 内容居中*/
 }
+
 #verify_code
 {
     width: 190px;
@@ -91,8 +89,6 @@ a:active
     vertical-align:middle; /*input框和img在同一行，但是无法水平对齐，如果图片设置了外边距，那么这个垂直对齐的语句将会把外边距也算在内*/
 }
 
-
-
 #login_submit /*登录按钮*/
 {
     background:#1989fa; /* 不能使用color属性*/
@@ -114,7 +110,3 @@ a:active
 {
     font-size:14px;
 }
-
-
-
-
