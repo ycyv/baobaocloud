@@ -17,6 +17,7 @@
             <input placeholder = "验证码" id = "verify_code" name="verify_code" type="text">
             <img id="verify_code_img" src="{{ api_captcha }}"><br>
             <input type="button" id = "login_submit" value = "登录"><br>
+            <a href="{{ api_register }}">没有帐号?立即注册</a>
             {% csrf_token %}
     </form>
     </div>
