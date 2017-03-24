@@ -1,15 +1,14 @@
 {% extends 'layouts/base.html' %}
 
 {% block body %}
-<div>
-    激活邮件已发到{{ email }}邮箱,<br/>
-    请登录邮箱完成激活。<br/>
-    没收到验证邮件?<br/>
-    1. 尝试到广告邮件、垃圾邮件目录里找找看<br/>
-    2. 邮箱未收到激活邮件，请<a href="javascript:void(0);" onclick="send_register_mail()">再次发送激活邮件</a><br/>
-    <hr/>
-    <a href="{{ api_login }}">激活完成,立即登录</a>
-</div>
+    <p id="step">注册账号--------<label id='step_now'>激活邮箱</label>--------完成注册</p>
+    <div class='public_input_module' id='register_mail'>
+        <p>Hi,{{ email }}</p>
+        <p>感谢您注册宝宝云服务。</p>
+        <p>我们已经向您的注册邮箱发送了一封注册确认邮件，请登录您的邮箱完成验证。</p>
+        <a href="{{ api_login }}">激活完成,立即登录</a>
+        <p>若您没有收到邮件您可以：检查您的垃圾邮件中，是否包含验证邮件；或者<a href="javascript:void(0);" onclick="send_register_mail()">再次发送激活邮件</a></p>
+    </div>
 {% endblock %}
 
 {% block script %}

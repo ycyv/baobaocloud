@@ -3,7 +3,10 @@
 <html>
 <head>
     {% block titels %}
-    <title>童年磨坊登录页面</title>
+    <title>宝宝云运维平台</title>
+    {% endblock %}
+
+    {% block refresh %}
     {% endblock %}
 
     <meta name="keywords" content="童年磨坊">
@@ -17,6 +20,9 @@
     <!--global.js文件需要调用jquery,所以这里我们必须先加载jquery再加载global.js-->
     <script src="{% static "js/jquery.min.js" %}"></script>
     <script src="{% static "js/global.js" %}"></script>
+    {% endblock %}
+
+    {% block script %}
     {% endblock %}
 </head>
 <body>

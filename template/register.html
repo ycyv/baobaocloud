@@ -1,29 +1,36 @@
 {% extends 'layouts/base.html' %}
-
+{% load static %}
 {% block body %}
-{% if error_msg %}
-<div style="color:red">{{ error_msg }}</div>
-{% endif %}
-<form action="{{ api_register }}" method="POST">
-    {% csrf_token %}
-    <table>
-        <tr>
-            <td><input name="username" type="text" placeholder="用户名" /></td>
-        </tr>
-        <tr>
-            <td><input name="password" type="password" placeholder="密码" /></td>
-        </tr>
-        <tr>
-            <td><input name="email" type="text" placeholder="邮箱" /></td>
-        </tr>
-        <tr>
-            <td><input name="verify_code" type="text" placeholder="验证码" /></td>
-            <td><img src="{{ api_captcha }}"><br/></td>
-        </tr>
-        <tr>
-            <td><input type="submit" value="注册"></td>
-            <td><a href="{{ api_login }}">已有帐号?立即登录</a></td>
-        </tr>
-    </table>
-</form>
+
+<div  class= "public_input_module">
+    {% if error_msg %}
+    <p id="error_msg">{{ error_msg }}</p>
+    {% else %}
+    <p id="error_msg"></p>
+    {% endif %}
+    <form action="{{ api_register }}" method="POST">
+        <input name="next" type="hidden" value="{{ next_page }}">
+        <table>
+            <tr>
+                <td> <input placeholder = "磨坊登录账号"  type = "text" name = "username" id="username_id"></td>
+            </tr>
+            <tr>
+                <td> <input placeholder = "磨坊登录密码" type = "password" name = "password" id ="password_id"></td>
+            </tr>
+            <tr>
+                <td><input name="email" type="text" placeholder="邮箱" /></td>
+            </tr>
+            <tr>
+                <td><input placeholder = "验证码" id = "verify_code" name="verify_code" type="text"><img id="verify_code_img" src="{{ api_captcha }}"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" id="register_submit" value="注册"></td>
+            </tr>
+            <tr>
+                <td><a href="{{ api_login }}">已有帐号?立即登录</a></td>
+            </tr>
+        </table>
+        {% csrf_token %}
+    </form>
+</div>
 {% endblock %}

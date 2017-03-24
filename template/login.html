@@ -2,20 +2,29 @@
 {% load static %}
 {% block body %}
 
-    <div  class= "login">
-        <form action="{{ api_login }}" method="POST">
-            {% if error_msg %}
-                <p id="error_msg">{{ error_msg }}</p>
-            {% else %}
-                <p id="error_msg"></p>
-            {% endif %}
-            <input name="next" type="hidden" value="{{ next_page }}">
-            <input placeholder = "磨坊登录账号"  type = "text" name = "username" id="username_id"><br>
-            <input placeholder = "磨坊登录密码" type = "password" name = "password" id ="password_id"></br>
-            <input placeholder = "验证码" id = "verify_code" name="verify_code" type="text">
-            <img id="verify_code_img" src="{{ api_captcha }}"><br>
-            <input type="button" id = "login_submit" value = "登录"><br>
-            {% csrf_token %}
+<div  class= "public_input_module">
+    {% if error_msg %}
+    <p id="error_msg">{{ error_msg }}</p>
+    {% else %}
+    <p id="error_msg"></p>
+    {% endif %}
+    <form action="{{ api_login }}" method="POST">
+        <input name="next" type="hidden" value="{{ next_page }}">
+        <table>
+            <tr>
+                <td><input placeholder = "磨坊登录账号"  type = "text" name = "username" id="username_id"></td>
+            </tr>
+            <tr>
+                <td><input placeholder = "磨坊登录密码" type = "password" name = "password" id ="password_id"></td>
+            </tr>
+            <tr>
+                <td><input placeholder = "验证码" id = "verify_code" name="verify_code" type="text"><img id="verify_code_img" src="{{ api_captcha }}"> </td>
+            </tr>
+            <tr>
+                <td><input type="button" id = "login_submit" value = "登录"></td>
+            </tr>
+        </table>
+        {% csrf_token %}
     </form>
-    </div>
+</div>
 {% endblock %}

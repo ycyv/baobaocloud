@@ -12,6 +12,26 @@
     border:1px #e3e3e3 solid  ;
 }
 
+/* register_mail.html使用到的属性 begin*/
+#register_mail /*所有用到边框样式的*/
+{
+    border:1px #e3e3e3 solid  ;
+}
+
+#step
+{
+    margin-top:100px;
+    margin-bottom:50px;
+    text-align:center; 
+}
+#step_now
+{
+    color :#1989fa;
+    font-size:25px;
+}
+/* register_mail.html使用到的属性 end*/
+
+
 
 #img-title
 {
@@ -60,20 +80,25 @@ a:active
     margin:15px;
 }
 
-.login /*登录框*/
+.public_input_module /*登录框*/
 {
     padding:40px 20px 20px 30px;
     height:auto;
     width:auto;
     margin:50px 30px 50px 30px;
-    text-align:center; /* 内容居中*/
+    text-align:center; /* 内容居中,只能作用于display不是block的，display为table的也不行，并且不断地向子元素传递这个居中的特性*/
+}
+
+table
+{
+    display:inline;/*table标签默认的display是table，此元素会作为块级表格来显示（类似 <table>），表格前后带有换行符。*/
 }
 #verify_code
 {
     width: 190px;
 }
 
-.login input
+.public_input_module input
 {
     border:1px #e3e3e3 solid;
     height:42px;
@@ -91,9 +116,13 @@ a:active
     vertical-align:middle; /*input框和img在同一行，但是无法水平对齐，如果图片设置了外边距，那么这个垂直对齐的语句将会把外边距也算在内*/
 }
 
+#send_mail /*注册页面，点击'点击再次发送'按钮*/
+{
+    cursor:pointer;
+}
 
 
-#login_submit /*登录按钮*/
+#login_submit,#register_submit /*登录按钮*/
 {
     background:#1989fa; /* 不能使用color属性*/
     border:1px #e3e3e3 solid;

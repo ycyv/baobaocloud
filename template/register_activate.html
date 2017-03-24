@@ -1,13 +1,14 @@
 {% extends 'layouts/base.html' %}
+{% load static %}
 
-{% block header %}
-<meta http-equiv="refresh" content="10; url={{ api_login }}" />
+{% block refresh %}
+<meta1 http-equiv="refresh" content="10; url={{ api_login }}" />
 {% endblock %}
 
 {% block body %}
-<div>
+<div class='public_input_module' >
     {% if not error_msg %}
-    激活成功, 10秒后跳转至登录页面<br/>
+    <p>激活成功, 10秒后跳转至登录页面</p>
     <a href="{{ api_login }}">立即跳转</a>
     {% else %}
     {{ error_msg }}, 10秒后跳转至登录页面<br/>
